@@ -1,0 +1,20 @@
+{
+  "name": "flashcardgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basiccard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmorgan23/flashcardgenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmorgan23/flashcardgenerator/issues"
+  },
+  "homepage": "https://github.com/mmorgan23/flashcardgenerator#readme"
+}

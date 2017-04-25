@@ -1,0 +1,26 @@
+[
+  {
+    "partial": "Human saliva has a boiling point three times that of regular water.",
+    "cloze": "saliva"
+  },
+  {
+    "partial": "An eagle can kill a young deer and fly away with it.",
+    "cloze": "eagle"
+  },
+  {
+    "partial": "A toaster uses almost half as much energy as a full-sized oven.",
+    "cloze": "toaster"
+  },
+  {
+    "partial": "In Uganda 50% of the population is under 15 years of age.",
+    "cloze": "Uganda"
+  },
+  {
+    "partial": "Facebook, Skype and Twitter are all banned in China.",
+    "cloze": "Skype"
+  },
+  {
+    "partial": "Every human spent about half an hour as a single cell.",
+    "cloze": "human"
+  }
+]
