@@ -1,5 +1,7 @@
 var BasicCard = require("./files/basiccard");
-var cardData = require("./basic.json");
+
+var card = require("./basic.json");
+
 var inquirer = require("inquirer");
 
 initGame();
@@ -8,15 +10,15 @@ function initGame() {
 
   var currentCard;
   var cardArray = [];
-  var initialScore = 0;
-  var initialIndex = 0;
+  var score = 0;
+  var index = 0;
 
-  for (var i = 0; i < cardData.length; i++) {
-    currentCard = new BasicCard(cardData[i].front, cardData[i].back);
+  for (var i = 0; i < card.length; i++) {
+    currentCard = new BasicCard(cardData[i].front, card[i].back);
     cardArray.push(currentCard);
   }
 
-    playRound(initialScore, cardArray, initialIndex);
+    playRound(score, cardArray, index);
 }
 
 function endGame(score) {
@@ -34,34 +36,5 @@ function endGame(score) {
     else {
       console.log("Goodbye!");
     }
-  });
-}
-
-function playRound(currentScore, cardArray, currentIndex) {
-  if (currentIndex < cardArray.length) {
-    promptUser(cardArray, currentIndex, currentScore);
-  }
-  else {
-    endGame(currentScore);
-  }
-}
-
-function promptUser(cardArray, currentIndex, currentScore) {
-  var card = cardArray[currentIndex];
-  inquirer.prompt([{
-    type: "input",
-    name: "text",
-    message: card.front + "\nAnswer:"
-  }]).then(function(answer) {
-    if (answer.text.trim().toLowerCase() === card.back.trim().toLowerCase()) {
-      currentScore++;
-      console.log("You are correct!");
-    } 
-    else {
-      console.log("Incorrect! The correct answer is '" + card.back + "'.");
-    }
-    currentIndex++;
-    console.log("-------------------------");
-    playRound(currentScore, cardArray, currentIndex);
   });
 }
